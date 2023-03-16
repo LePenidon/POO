@@ -4,15 +4,9 @@ public class Pessoa {
     Camiseta camiseta;
 
     Pessoa(String umNome, int umaIdade) {
-        this.nome = umNome;
+            this.nome = umNome;
         this.idade = umaIdade;
         this.camiseta = new Camiseta('M', "Azul");
-
-        try {
-            this.camiseta = new Camiseta("M", "Verde");
-        } catch (Exception e) {
-            return;
-        }
     }
 
     void printDescricao() {

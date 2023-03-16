@@ -12,11 +12,9 @@ public class Camiseta {
     }
 
     void setTamanho(char umTamanho) throws Exception {
-        if (umTamanho != 'P' && umTamanho != 'M' && umTamanho != 'G') {
-            throw new Exception("Tamanho errado");
-        } else {
+        
             this.tamanho = umTamanho;
-        }
+        
     }
 
     void setCor(String umaCor) {
