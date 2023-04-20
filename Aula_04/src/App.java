@@ -19,7 +19,9 @@ public class App {
         for (int i = 0; i < times.length; i++) {
             ar.add(times[i]);
         }
+
         Collections.sort(ar);
+
         for (int i = 0; i < ar.size(); i++)
             System.out.println(ar.get(i));
     }
