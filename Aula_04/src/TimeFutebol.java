@@ -8,9 +8,12 @@ public class TimeFutebol implements Comparable {
     int gols_sofridos;
     int cart_amarelos;
     int cart_vermelhos;
+    String nome;
 
-    public TimeFutebol(int vitorias, int derrotas, int empates, int gols_feitos, int gols_sofridos, int cart_amarelos,
+    public TimeFutebol(String nome, int vitorias, int derrotas, int empates, int gols_feitos, int gols_sofridos,
+            int cart_amarelos,
             int cart_vermelhos) {
+        this.nome = nome;
         this.vitorias = vitorias;
         this.derrotas = derrotas;
         this.empates = empates;
@@ -59,6 +62,7 @@ public class TimeFutebol implements Comparable {
     }
 
     public String toString() {
-        return "" + this.pontos();
+        return "" + this.nome;
     }
+
 }
