@@ -1,8 +1,10 @@
 package Pecas;
 
+import java.io.Serializable;
+
 import Auxiliar.Posicao;
 
-public class Cavalo extends Peca {
+public class Cavalo extends Peca implements Serializable {
 
     public Cavalo(String sAFileName, Posicao aPosicao, boolean bBrancas) {
         super(sAFileName, aPosicao, bBrancas);

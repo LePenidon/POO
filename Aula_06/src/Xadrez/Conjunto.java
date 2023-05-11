@@ -2,9 +2,11 @@ package Xadrez;
 
 import Pecas.Peca;
 import Auxiliar.Posicao;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Conjunto extends ArrayList<Peca> {
+public class Conjunto extends ArrayList<Peca> implements Serializable {
     public Conjunto() {
         super();
     }

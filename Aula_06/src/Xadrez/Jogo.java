@@ -10,10 +10,13 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
 public class Jogo extends javax.swing.JFrame implements MouseListener, KeyListener {
 
@@ -130,15 +133,24 @@ public class Jogo extends javax.swing.JFrame implements MouseListener, KeyListen
 
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            System.out.println("Estou salvando o jogo");
-            File tanque = new File("Poo.dat");
-            try {
-                tanque.createNewFile();
-                FileOutputStream canoOut = new FileOutputStream(tanque);
-                GZIPInputStream compactador = new GZIPInputStream(canoOut);
 
-            } catch (Exception e) {
+            try {
+                System.out.println("Estou salvando o jogo");
+                File tanque = new File("Poo.dat");
+                tanque.createNewFile();
+                // FileOutputStream canoOut = new FileOutputStream(tanque);
+                FileInputStream canoOut = new FileInputStream(tanque);
+                // cano new FileInputStream(canoOut)
+                GZIPInputStream compactador = new GZIPInputStream(new FileInputStream(canoOut));
+                ObjectOutputStream serializador = new ObjectOutputStream(compactador);
+                serializador.writeObject(this.cBrancas);
+                serializador.writeObject(this.cPretas);
+                serializador.flush();
+                serializador.close();
+
+            } catch (Exception ex) {
                 // TODO: handle exception
+                System.out.println("Ocorreu o erro: " + ex.getMessage());
             }
         }
         repaint();

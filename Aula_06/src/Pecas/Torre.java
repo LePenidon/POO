@@ -1,8 +1,10 @@
 package Pecas;
 
+import java.io.Serializable;
+
 import Auxiliar.Posicao;
 
-public class Torre extends Peca {
+public class Torre extends Peca implements Serializable {
 
     public Torre(String sAFileName, Posicao aPosicao, boolean bBrancas) {
         super(sAFileName, aPosicao, bBrancas);

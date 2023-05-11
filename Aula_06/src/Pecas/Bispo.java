@@ -1,9 +1,12 @@
 package Pecas;
 
 import Xadrez.Jogo;
+
+import java.io.Serializable;
+
 import Auxiliar.Posicao;
 
-public class Bispo extends Peca {
+public class Bispo extends Peca implements Serializable {
     public Bispo(String sAFileName, Posicao aPosicao, boolean bBrancas) {
         super(sAFileName, aPosicao, bBrancas);
     }

@@ -14,8 +14,6 @@ public class Main {
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                System.out.println(Consts.PATH);
-
                 Jogo tMeuJogo = new Jogo();
                 tMeuJogo.addPeca(new Peao("PeaoBranco.png", new Posicao(6, 0), true), Jogo.CoresConjuntos.BRANCAS);
                 tMeuJogo.addPeca(new Peao("PeaoBranco.png", new Posicao(6, 1), true), Jogo.CoresConjuntos.BRANCAS);

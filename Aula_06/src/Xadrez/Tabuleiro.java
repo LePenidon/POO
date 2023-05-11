@@ -8,13 +8,14 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.image.BufferStrategy;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-public class Tabuleiro extends JPanel {
+public class Tabuleiro extends JPanel implements Serializable {
 
     Graphics g2;
     Jogo j;
