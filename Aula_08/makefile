@@ -3,10 +3,10 @@ CPPFLAGS = -pedantic-errors -Wall -lm -I/.
 all: endereco.o pessoa.o main.o
 	g++ endereco.o pessoa.o main.o -o run $(CPPFLAGS);./run
 
-endereco.o: Endereco.cpp
+endereco.o:
 	g++ -c Endereco.cpp -o endereco.o $(CPPFLAGS)
 
-pessoa.o: Pessoa.cpp
+pessoa.o:
 	g++ -c Pessoa.cpp -o pessoa.o $(CPPFLAGS)
 	
 main.o:
